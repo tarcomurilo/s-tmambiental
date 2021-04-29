@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    border: 0px solid red;
+	font-family:Calibri;
+}
+
+.rowmenu {
+	background-color: #FFFFFF;
+	width:100%;
+	position:fixed;
+	top:0px; 
+	z-index:300;
+	display:block;
+	}
+
+.logo{
+	display:block;
+	width:auto;
+	height:120px;
+	
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+}
+
+.row {
+		position:relative;
+		top:150px;
+}
+
+
+.btnmenu{
+	
+	font-family:Calibri;
+	font-size:18;
+	color:#333333;
+	font-weight:bold;
+	display:inline-block;
+	padding-bottom:6px;
+	padding-top:6px;
+	padding-left:5px;
+	padding-right:5px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border:1px solid #333333;
+	margin:5px;
+	min-width:120px;
+	text-align:center;
+	cursor:pointer;	
+
+}
+.btnmenu a{
+	text-decoration:none;
+	color:#333333;
+}
+.btnmenu2 {
+	font-family:Calibri;
+	font-size:18;
+	font-color:#333333;
+	font-weight:bold;
+	display:inline-block;
+	padding-bottom:6px;
+	padding-top:6px;
+	padding-left:5px;
+	padding-right:5px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border:1px solid #333333;
+	margin:5px;
+	min-width:120px;
+	text-align:center;
+	cursor:pointer;	
+	position:relative;
+	bottom:-40px;
+
+}
+
+ a{
+	text-decoration:none;
+	color:#333333;
+}
+
+
+.btnmenu:hover {
+    background-color: #334433; /* Green */
+    color: white;
+}
+
+.btnmenu2:hover {
+    background-color: #334433; /* Green */
+    color: white;
+}
+
+.txtSlogan {
+	position:absolute;
+	z-index:200;
+	top:5%;
+	left:20%;
+	color:white;
+	font-size:48;
+	font-weight:bold;
+	width:450px;
+	text-shadow: -2px 2px #555555;
+}
+
+.mainBox {
+	padding:5px 10px 5px 10px;
+	margin:30px 1% 10px ;
+	display:inline-block;
+	min-height:837px;
+	width:480px;
+	background-color:#CCCCCC;
+	box-shadow:-2px 2px #555555;
+	border: 1px SOLID #555555;
+	color:#333333;
+	text-align:justify;
+	text-justify:inter-word;
+	float:left;
+}
+
+	.mainBox h1{
+		font-size:24px;
+		font-weight:bold;
+		text-align:center;
+	}
+
+	.mainBox p {
+		font-size:16px;
+		position:relative;
+		top:10px;
+	}
+
+
+@media only screen and (max-width: 800px) {
+    [class*="col-"] {
+        width: 100%;
+		font-family:Calibri;
+	}
+	
+	.btnmenu {
+		font-family:Calibri;
+		font-size:14;
+		font-color:#333333;
+		font-weight:bold;
+		display:block;
+		padding-bottom:6px;
+		padding-top:6px;
+		padding-left:10px;
+		padding-right:10px;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+		border:1px solid #333333;
+		min-width:120px;
+		text-align:center;
+		width:90%;
+		
+		margin-left:0px;
+		cursor:pointer;	
+	}
+	
+		.btnmenu2 {
+		font-family:Calibri;
+		font-size:14;
+		font-color:#333333;
+		font-weight:bold;
+		display:block;
+		padding-bottom:6px;
+		padding-top:6px;
+		padding-left:10px;
+		padding-right:10px;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+		border:1px solid #333333;
+		min-width:120px;
+		text-align:center;
+		width:90%;
+		bottom:-20px;
+		margin-left:0px;
+		cursor:pointer;	
+	}
+	
+	.rowmenu {
+		background-color:#FFFFFF;
+		width:100%;
+		top:0px; 
+		z-index:200;
+		max-height:200px;
+		position:static;
+		display:block;
+	}
+	
+	.row{
+		position:static;
+
+		top:10px;
+
+	}
+	.logo{
+		display:block;
+		width:auto;
+		height:150px;
+		margin:auto;
+	}	
+	
+
+	.btnmenu:hover {
+		background-color: #334433; /* Green */
+		color: white;
+	}
+
+	.txtSlogan {
+	position:absolute;
+	z-index:100;
+	top:10%;
+	left:10%;
+	color:white;
+	font-size:18;
+	font-weight:bold;
+	width:300px;
+}
+
+	.mainBox {
+		padding:2px 2px 2px 2px;
+		margin:15px;
+		display:inline-block;
+		min-height:320px;
+		width:90%;
+		max-width:330px;
+		background-color:#CCCCCC;
+		box-shadow:-2px 2px #555555;
+		border: 1px SOLID #555555;
+		color:#333333;
+	}
+
+	.mainBox h1{
+		font-size:16px;
+		font-weight:bold;
+	}
+	.mainBox p {
+		font-size:12px;
+	}
+
+
+	
+}
+
+
