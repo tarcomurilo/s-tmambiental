@@ -131,8 +131,8 @@ body {
 .mainBox {
 	padding:5px 10px 5px 10px;
 	margin:30px 1% 10px ;
-	display:inline-block;
-	min-height:837px;
+
+	min-height:600px;
 	width:480px;
 	background-color:#CCCCCC;
 	box-shadow:-2px 2px #555555;
