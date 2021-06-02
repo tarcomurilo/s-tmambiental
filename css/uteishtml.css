@@ -134,7 +134,7 @@ body {
 	margin:10px;
 	display:inline-block;
 	min-height:300px;
-	max-width:90%;
+	min-width:100%;
 	background-color:#CCCCCC;
 	box-shadow:-2px 2px #555555;
 	border: 1px SOLID #555555;
@@ -262,7 +262,7 @@ body {
 		min-height:490px;
 		width:90%;
 		max-width:800px;
-		min-width:640;
+		min-width:330;
 		background-color:#CCCCCC;
 		box-shadow:-2px 2px #555555;
 		border: 1px SOLID #555555;
