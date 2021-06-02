@@ -134,7 +134,7 @@ body {
 	margin:10px;
 	display:inline-block;
 	min-height:300px;
-	max-width:480px;
+	max-width:90%;
 	background-color:#CCCCCC;
 	box-shadow:-2px 2px #555555;
 	border: 1px SOLID #555555;
