@@ -257,11 +257,11 @@ body {
 	.mainBox {
 		padding:2px 2px 2px 2px;
 		margin:15px;
-		display:inline-block;
+		display:list-item;
 		
 		min-height:490px;
 		width:90%;
-		max-width:600px;
+		max-width:640px;
 		background-color:#CCCCCC;
 		box-shadow:-2px 2px #555555;
 		border: 1px SOLID #555555;
