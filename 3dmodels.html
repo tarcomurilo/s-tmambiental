@@ -11,145 +11,42 @@
 	</head>
 	
 	<body>
-		<div class="rowmenu"  style="padding:0px">
-
-			<div class="col-1">&nbsp;</div>
-			<div class="col-2" > <img src="image/tmlogo2.png" class="logo"> </div>
-
-			<div class="col-9"  > 
-				<ul >
-					<a href="index.html"><li class="btnmenu"><a href="index.html">Home</a></li></a>
-					<a href="sobre.html"><li class="btnmenu">Sobre</li></a>
-					<a href="solucoes.html"><li class="btnmenu">Soluções</li></a>
-					<a href="clientes.html"><li class="btnmenu">Clientes</li></a>
-					<a href="uteis.html"><li class="btnmenu">Portfólio</li></a>
-					<a href="contato.html"><li class="btnmenu">Contato</li></a>
-					
-				</ul> 
-				</div>
-				<div class="col-1">&nbsp;</div>
-		</div>
 		
-		<div class="row" style="z-index:100; "> 
-			
-			<div class="col-12" style="position:relative">
-				<img src="image/fundo2.jpg" style="display:block; margin:auto; width:100%;height:auto;">
-				<p class="txtSlogan">Portfólio e casos</p>
-			</div>
+			<script type="module" src="three.js">
+				import * as THREE from './three.js';
+				import { GLTFLoader } from 'GLTFLoader.js';
+
+				let scene, camera, renderer, hlight;
+
+				function init() {
+					scene = new THREE.Scene();
+					scene.background = new THREE.Color(0xaaaaaa);
+
+					camera = new THREE.PerspectiveCamera(40, window.innerWidth/window.innerHeight, 1, 5000)
 				
+					hlight = new THREE.AmbientLight (0x404040, 100);
+					scene.add(hlight);
 
-		</div>
-		
-			
-			<div class="row" style="position:relative; vertical-align:top;">
-				<div class="col-1"> &nbsp;</div>
-				<div class="col-10" style="margin:auto;">
+					renderer = new THREE.WebGLRenderer({antialias:true});
+
+					renderer.setSize(window.innerWidth, window.innerHeight);
+					document.body.appendChild(renderer.domElement);
+
+					let loader = new THREE.GLTFLoader()
+					loader.load('mina2.glb', function(gltf){
+						scene.add(gltf.scene);
+						renderer.render(scene, camera);
+						
+					});
+
 				
-					<div class="mainBox">
-						<h1>Caracterização de Vegetação</h1>
-						
-						<p>Caracterização de vegetação para Estudo de Prévio Ambiental
+					console.log("mina");
 
-								
-							<script src="js/three.js"></script>
-							<script>
-								// Our Javascript will go here.
-							</script>			
-
-								</script>
-
-							</p>
-						<br><br>
-					
-					</div>
-					
-					<div class="mainBox" >
-						<h1>Execução de PRAD/PTRF</h1>
-						
-						<p>Execução, acompanhamento e monitoramento de plantio de mudas nativas devido à compensação ambiental exigida para o licenciamento.
-
-								<br><br>&nbsp;&nbsp;• Serviços executados
-								<br>&nbsp;&nbsp;&nbsp;- Projeto descritivo das atividades 
-								<br>&nbsp;&nbsp;&nbsp;- Prescrição dos tratamentos culturais
-								<br>&nbsp;&nbsp;&nbsp;- Elaboração de relatório de plantio
-								<br>&nbsp;&nbsp;&nbsp;- Monitoramento de condução
-								<br><br>
-								Execução de plantio para compensação ambiental<br>
-								<img src="portfolioimg/port2-1.png" style="width:100%;height:auto;margin:auto;	"><br><br>
-							</p>
-					<br>
-					
-					</div>
-					<div class="mainBox" style="min-height:640">
-						<h1>Inventário Florestal para Supressão de Vegetação</h1>
-						
-						<p>Levantamento e processamento de dados de inventário florestal para supressão de vegetação.
-
-								<br><br>&nbsp;&nbsp;• Serviços executados
-								<br>&nbsp;&nbsp;&nbsp;- Caracterização física e biótica do local
-								<br>&nbsp;&nbsp;&nbsp;- Coleta de dados de censo florestal (Inventário 100%)
-								<br>&nbsp;&nbsp;&nbsp;- Análises florestais e mapeamento do local de supressão
-								<br>&nbsp;&nbsp;&nbsp;- Elaboração de PUP com descrição física e biótica da área
-								<br><br>
-								Coleta de dados de inventário e elaboração de mapa de supressão<br>
-								<img src="portfolioimg/port3-1.png" style="width:100%;height:auto;margin:auto;	"><br><br>
-							</p>
-					<br>
-					
-					</div>
-					<div class="mainBox" style="min-height:640">
-						<h1>Levantamentos topográficos e aéreos</h1>
-						
-						<p>Elaboração de ortofotografias digitais e modelos digitais de terreno
-								<br><br>&nbsp;&nbsp;• Serviços executados
-								<br>&nbsp;&nbsp;&nbsp;- Sobrevoo com drone e coleta de fotografias aéreas
-								<br>&nbsp;&nbsp;&nbsp;- Elaboração de modelo digital de superficie (modelo 3D do local)
-								<br>&nbsp;&nbsp;&nbsp;- Finalização da fogografia ortorretificada 
-
-								<br><br>
-								Elaboração do modelo tridimensional do terreno<br>
-								<img src="portfolioimg/port5-1.jpg" style="width:100%;height:auto;margin:auto;	"><br><br>
-								Fotografias ortorretificadas e georreferenciadas<br>
-								<img src="portfolioimg/port5-2.jpg" style="width:100%;height:auto;margin:auto;	"><br><br>
-							</p>
-					<br>
-					
-					
-					</div>
-					<div class="mainBox" style="min-height:640">
-						<h1>Diagnóstico Ambiental de estações rádio-base</h1>
-						
-						<p>Levantamento das características ambientais de estações rádio-base de telefonia celular
-
-								<br><br>&nbsp;&nbsp;• Serviços executados
-								<br>&nbsp;&nbsp;&nbsp;- Caracterização ambiental da situação do <i>site</i>
-								<br>&nbsp;&nbsp;&nbsp;- Elaboração de plantas <i>as-built</i> 
-								<br>&nbsp;&nbsp;&nbsp;- Elaboração e revisão de relatórios
-
-								<br><br>
-								Caracterização ambiental de estações rádio-base<br>
-								<img src="portfolioimg/port4-1.png" style="width:100%;height:auto;margin:auto;	"><br><br>
-							</p>
-					<br>
-					
-					
-					</div>
+				}
 				
-				</div>
-			</div>
-		
-				<div class="row">
-				<div class="col-12" style="color:#222222;background-color:#222222; height:10px;"></div>
-			</div>
-		<div class="row" style="color:#CCCCCC;background-color:#222222; height:100px;">
+				init();
+			</script>			
 
 			
-				<div class="col-2" ><font color="#222222">&nbsp;</font></div>
-				<div class="col-5">(C) Todos os direitos reservados - 2017</div>
-				
-				<div class="col-4" style="color:#CCCCCC;background-color:#222222; ">TM Consultoria Ambiental <br>Telefone: (31) 9 9383 - 7795 <br>E-mail: contato@tmambiental.com</div>
-								<div class="col-1"></div>
-			</div>
-		
 	</body>
 </html>
